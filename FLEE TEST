@@ -1,0 +1,25 @@
+|--------------------------------------------------------------------------------------------------------------------------------|
+                                                                        In mobs.YML
+Weakling:
+  Type: WOLF
+  Display: '&cWeak Pathetic Creature'
+  AIGoalSelectors:
+    - clear
+    - panicWhenOnFire
+    - fleeplayers
+    - leapattarget
+    - avoidzombies 
+    - avoidskeletons
+    - avoidcreepers
+  Health: 1
+  Damage: 1
+  Options:
+  Skills:
+  - skill{s=Immortal;sync=true} ~onDamaged
+|--------------------------------------------------------------------------------------------------------------------------------|
+                                                                        In skills.YML
+Immortal:
+  Skills:
+  - CancelEvent
+  - message{m="&cJust why do you want to kill this poor creature"} @trigger
+|--------------------------------------------------------------------------------------------------------------------------------|
